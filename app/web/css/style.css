@@ -1,0 +1,119 @@
+body #pjWrapper { font-size: 16px; line-height: 26px; color: #343639; font-weight: 300; }
+
+#pjWrapper .glyphicon { font-family: 'Glyphicons Halflings'; }
+
+/*** Modules ***/
+
+#pjWrapper .pjCss-head,
+#pjWrapper .pjCss-class-body { *zoom: 1; }
+
+#pjWrapper .pjCss-head:after,
+#pjWrapper .pjCss-class-body:after { content: ''; clear: both; display: table; }
+
+#pjWrapper .btn { -webkit-transition: none; -o-transition: none; transition: none; }
+
+html, body { height: 100%; }
+
+#pjWrapper .pjCss-head { margin-bottom: 15px; background-color: #f5f5f5; padding: 20px 20px 20px; border-radius: 5px; border: 1px solid #d9d9db; }
+
+#pjWrapper .pjCss-filter { margin-bottom: 15px; }
+#pjWrapper .pjCss-filter label { padding-top: 5px; }
+
+#pjWrapper .pjCss-class { border: 1px solid #d9d9db; border-radius: 5px; margin-bottom: 15px;}
+
+#pjWrapper .pjCss-img-left,
+#pjWrapper .pjCss-head .btn { float: left; }
+#pjWrapper .pjCss-head .pjCssHome{ margin-right: 10px;}
+#pjWrapper .pjCss-head .pjCssMenuNav{ float: left; width: -moz-calc(85% - 10px) !important; width: -webkit-calc(85% - 10px) !important; width: -o-calc(85% - 10px) !important; width: calc(85% - 10px) !important;}
+#pjWrapper .pjCss-head .pjCssOrderTitle{margin-top: 8px !important; margin-bottom: 0px !important; margin-right: 0px;}
+
+#pjWrapper input.btn { padding-top: 0; padding-bottom: 0; }
+
+#pjWrapper .pjCss-img-right { float: right; }
+
+#pjWrapper .pjCss-class-info{overflow: hidden;}
+
+#pjWrapper .pjCss-class-desc { margin-bottom: 15px; }
+
+#pjWrapper .pjCss-class-heading { font-weight: bold; font-size: 24px; padding-bottom: 25px; }
+
+#pjWrapper .pjCss-class-body { padding: 20px 20px 5px; }
+#pjWrapper .pjCss-class-body .pjCss-img-left { margin-right: 30px; margin-bottom: 15px;}
+#pjWrapper .pjCss-class-body .pjCss-img-right { margin-left: 30px; margin-bottom: 15px; }
+
+#pjWrapper .btn-default { height: 40px; padding-top: 8px; font-size: 15px; }
+#pjWrapper .btn-secondary,
+#pjWrapper .btn-primary { height: 42px; padding-top: 9px; font-size: 16px; }
+#pjWrapper .btn-secondary { color: #fff; background-color: #7a7b7d; border-color: #5c5f64; }
+
+#pjWrapper .form-control { height: 40px; font-size: 15px; }
+#pjWrapper textarea.form-control { height: 105px; }
+
+#pjWrapper .pjCss-class-footer { background-color: #f5f5f5; padding: 15px 20px 20px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; border-top: 1px solid #d9d9db; }
+#pjWrapper .pjCss-class-footer p { margin: 0; font-size: 18px; padding-top: 5px;}
+#pjWrapper .pjCss-class-footer label { font-size: 17px; font-weight: normal; }
+#pjWrapper .pjCss-class-footer .btn-primary {  width: 100%; margin-top: 29px; }
+#pjWrapper .pjCss-class-footer input.btn-primary { margin-top: 0; }
+
+#pjWrapper .pjCss-teachers { border-top: 1px solid #d9d9db; margin-top: 5px; padding-top: 20px; padding-bottom: 15px; }
+#pjWrapper .pjCss-teachers > .row { padding-bottom: 20px; }
+
+#pjWrapper .pjCss-teachers-heading { font-size: 18px; text-transform: uppercase; font-weight: bold; padding-bottom: 20px; }
+
+#pjWrapper .pjCss-teacher-name { font-weight: bold; font-size: 18px; padding-bottom: 5px; }
+
+#pjWrapper .pjCss-teacher-desc { font-size: 15px; }
+
+#pjWrapper .pjCss-captcha-image { padding-top: 30px; }
+#pjWrapper .pjCss-captcha-image img{cursor: pointer}
+
+#pjWrapper .pjCss-booking-row { padding: 15px 0; }
+#pjWrapper .pjCss-booking-row + .pjCss-booking-row { border-top: 1px solid #d9d9db; }
+#pjWrapper .pjCss-booking-row strong { display: block; font-size: 18px; }
+
+#pjWrapper .pjCss-booking-thanks { padding-bottom: 15px; text-align: center; }
+#pjWrapper .pjCss-booking-thanks p { padding-bottom: 15px; }
+
+/* ==========================================================================
+	.Modal
+========================================================================== */
+.modal-backdrop.fade {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.modal-backdrop.fade.in {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+@media (max-width: 991px) {
+	#pjWrapper .pjCss-class-footer p { padding-bottom: 15px; }	
+}
+
+@media (max-width: 767px) {
+	#pjWrapper .pjCss-img-left,
+	#pjWrapper .pjCss-img-right { float: none; }
+
+	#pjWrapper .pjCss-class-body .pjCss-img-left,
+	#pjWrapper .pjCss-class-body .pjCss-img-right { margin: 0 0 30px; }
+	
+	#pjWrapper .pjCss-teacher-name { padding-top: 10px; } 
+	#pjWrapper .pjCss-teacher-desc { padding-bottom: 15px; }
+
+	#pjWrapper .pjCss-class-footer input.btn-primary { margin-top: 15px; }
+
+	#pjWrapper .pjCss-class-heading { font-size: 22px; }
+
+	#pjWrapper .pjCss-class-footer label { font-size: 16px; }
+
+	#pjWrapper .pjCss-captcha-image { padding-top: 0; }
+	
+	#pjWrapper .pjCss-booking-row strong { text-align: left; }
+}
+
+@media (max-width: 479px) {
+	#pjWrapper .pjCss-class-heading { font-size: 21px; }
+
+	#pjWrapper .pjCss-class-footer label { font-size: 15px; }
+
+}

@@ -1,0 +1,25 @@
+/* ==========================================================================
+	#General
+========================================================================== */
+#pjWrapper * { font-family: 'PT Serif', serif; }
+#pjWrapper .fa { font-family: 'FontAwesome'; }
+#pjWrapper .glyphicon { font-family: 'Glyphicons Halflings'; }
+
+#pjWrapper a { color: #1ab4c0; }
+
+#pjWrapper .btn-primary { background-color: #1ab4c0; border-color: #189aa4; color: #fff; }
+#pjWrapper .btn-primary:hover { background-color: #189aa4; }
+
+#pjWrapper .btn-secondary,
+#pjWrapper .pjCss-head { background-color: #e37d4c; border-color: #c36d44; }
+#pjWrapper .pjCss-head .pjCssOrderTitle{color: #fff;}
+
+#pjWrapper .btn-secondary:hover { background-color: #c36d44; }
+
+#pjWrapper .pjCss-class-heading span,
+#pjWrapper .pjCss-class-heading a,
+#pjWrapper .btn .glyphicon,
+#pjWrapper .pjCss-class-footer p strong,
+#pjWrapper .pjCss-booking-row strong { color: #1ab4c0; }
+
+#pjWrapper .pjCss-class-footer { background-color: #f4f4f5; } 

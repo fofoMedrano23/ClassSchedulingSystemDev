@@ -1,0 +1,32 @@
+/* ==========================================================================
+	#General
+========================================================================== */
+#pjWrapper * { font-family: 'Oxygen', sans-serif; }
+#pjWrapper .fa { font-family: 'FontAwesome'; }
+#pjWrapper .glyphicon { font-family: 'Glyphicons Halflings'; }
+
+#pjWrapper a { color: #c32816; }
+
+#pjWrapper .btn-primary { background-color: #c32816; border-color: #9e2011; color: #fff; }
+#pjWrapper .btn-primary:hover { background-color: #9e2011; }
+
+#pjWrapper .btn-secondary,
+#pjWrapper .pjCss-head { background-color: #134175; border-color: #103763; }
+#pjWrapper .pjCss-head .pjCssOrderTitle{color: #fff;}
+
+#pjWrapper .btn-secondary:hover { background-color: #103763; }
+
+#pjWrapper .pjCss-class-heading span,
+#pjWrapper .pjCss-class-heading a,
+#pjWrapper .btn .glyphicon,
+#pjWrapper .pjCss-class-footer p strong,
+#pjWrapper .pjCss-booking-row strong { color: #c32816; }
+
+#pjWrapper .pjCss-class-footer { background-color: #edf0f5; } 
+
+#pjWrapper .pjCss-teachers,
+#pjWrapper .form-control,
+#pjWrapper .pjCss-class-footer,
+#pjWrapper .pjCss-booking-row + .pjCss-booking-row,
+#pjWrapper .pjCss-class,
+#pjWrapper .btn-default { border-color: #c5c7d0; }
