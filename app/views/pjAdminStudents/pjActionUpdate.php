@@ -64,12 +64,12 @@ if (isset($tpl['status']))
 		<p>
 			<label class="title"><?php __('lblResvCity'); ?></label>
 			<span class="inline-block">
-				<select name="city" id="city" class="pj-form-field w400">
+				<select name="genero" id="genero" class="pj-form-field w400">
 					<option value="">-- <?php __('lblChoose'); ?>--</option>
 					<?php
 					foreach ($tpl['gender_arr'] as $v)
 					{
-						?><option value="<?php echo $v['gender']; ?>"<?php echo $tpl['arr']['city'] == $v['gender'] ? ' selected="selected"' : NULL; ?>><?php echo stripslashes($v['gender']); ?></option><?php
+						?><option value="<?php echo $v['gender']; ?>"<?php echo $tpl['arr']['genero'] == $v['gender'] ? ' selected="selected"' : NULL; ?>><?php echo stripslashes($v['gender']); ?></option><?php
 					}
 					?>
 				</select>

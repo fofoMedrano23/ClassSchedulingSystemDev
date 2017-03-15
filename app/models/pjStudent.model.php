@@ -19,7 +19,7 @@ class pjStudentModel extends pjAppModel
 		array('name' => 'phone', 'type' => 'varchar', 'default' => ':NULL'),
 		array('name' => 'company', 'type' => 'varchar', 'default' => ':NULL'),
 		array('name' => 'address', 'type' => 'varchar', 'default' => ':NULL'),
-		array('name' => 'city', 'type' => 'varchar', 'default' => ':NULL'),
+		array('name' => 'genero', 'type' => 'varchar', 'default' => ':NULL'),
 		array('name' => 'state', 'type' => 'varchar', 'default' => ':NULL'),
 		array('name' => 'zip', 'type' => 'varchar', 'default' => ':NULL'),
 		array('name' => 'country_id', 'type' => 'int', 'default' => ':NULL'),
