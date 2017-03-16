@@ -204,12 +204,17 @@ class pjAdminBookings extends pjAdmin
 		{
 			if (isset($_POST['booking_create']))
 			{
+                            
+                            
+                            
 				$data = array();
 				
 				$class_arr = pjClassModel::factory()->find($_POST['class_id'])->getData();
 				
 				if($_POST['student_type'] == 'new')
 				{
+                                    
+                                    
 					$student_data = array();
 					$student_data['email'] = isset($_POST['email']) ? $_POST['email'] : ':NULL';
 					$student_data['password'] = 'pass';

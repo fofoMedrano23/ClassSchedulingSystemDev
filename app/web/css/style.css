@@ -14,7 +14,7 @@ body #pjWrapper { font-size: 16px; line-height: 26px; color: #343639; font-weigh
 
 html, body { height: 100%; }
 
-#pjWrapper .pjCss-head { margin-bottom: 15px; background-color: #f5f5f5; padding: 20px 20px 20px; border-radius: 5px; border: 1px solid #d9d9db; }
+#pjWrapper .pjCss-head { margin-bottom: 15px; background-color: #FF4136; padding: 20px 20px 20px; border-radius: 5px; border: 1px solid #d9d9db; }
 
 #pjWrapper .pjCss-filter { margin-bottom: 15px; }
 #pjWrapper .pjCss-filter label { padding-top: 5px; }

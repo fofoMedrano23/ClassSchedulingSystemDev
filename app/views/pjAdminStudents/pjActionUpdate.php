@@ -78,13 +78,13 @@ if (isset($tpl['status']))
 		<p>
 			<label class="title"><?php __('lblResvState'); ?></label>
 			<span class="inline_block">
-				<input type="text" name="state" id="state" value="<?php echo pjSanitize::html($tpl['arr']['state'])?>" class="pj-form-field w250" />
+				<textarea name="experiencia" rows="5" cols="40" id="experiencia"><?php echo pjSanitize::html($tpl['arr']['experiencia'])?></textarea>
 			</span>
 		</p>
 		<p>
 			<label class="title"><?php __('lblResvZip'); ?></label>
 			<span class="inline_block">
-				<input type="text" name="zip" id="zip" value="<?php echo pjSanitize::html($tpl['arr']['zip'])?>" class="pj-form-field w250" />
+			c	<input type="text" name="zip" id="zip" value="<?php echo pjSanitize::html($tpl['arr']['zip'])?>" class="pj-form-field w250" />
 			</span>
 		</p>
 		<p>

@@ -69,7 +69,7 @@ if (isset($tpl['status']))
 		<p>
 			<label class="title"><?php __('lblResvState'); ?></label>
 			<span class="inline_block">
-				<input type="text" name="state" id="state" class="pj-form-field w250" />
+				<textarea name="experiencia" rows="5" cols="40" id="experiencia"><?php echo pjSanitize::html($tpl['arr']['experiencia'])?></textarea>
 			</span>
 		</p>
 		<p>
