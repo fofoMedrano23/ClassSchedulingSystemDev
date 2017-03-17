@@ -58,7 +58,7 @@ if (isset($tpl['status']))
 		<p>
 			<label class="title"><?php __('lblResvAddress'); ?></label>
 			<span class="inline_block">
-				<input type="text" name="address" id="address" value="<?php echo pjSanitize::html($tpl['arr']['address'])?>" class="pj-form-field w400" />
+                        <input type="text" id="address" name="address" value="<?php echo pjSanitize::html($tpl['arr']['address'])?>" readonly="true" onclick="$('#address').datepicker({changeYear: true,dateFormat: 'dd-mm-yy'});$('#address').datepicker('show');">
 			</span>
 		</p>
 		<p>
@@ -84,7 +84,7 @@ if (isset($tpl['status']))
 		<p>
 			<label class="title"><?php __('lblResvZip'); ?></label>
 			<span class="inline_block">
-			c	<input type="text" name="zip" id="zip" value="<?php echo pjSanitize::html($tpl['arr']['zip'])?>" class="pj-form-field w250" />
+				<input type="text" name="zip" id="zip" value="<?php echo pjSanitize::html($tpl['arr']['zip'])?>" class="pj-form-field w250" />
 			</span>
 		</p>
 		<p>
@@ -125,6 +125,8 @@ if (isset($tpl['status']))
 	<script type="text/javascript">
 	var myLabel = myLabel || {};
 	</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<?php
 }
 ?>
