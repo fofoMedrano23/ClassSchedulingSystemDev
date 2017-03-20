@@ -288,7 +288,7 @@ if (isset($tpl['status']))
 						<p>
 							<label class="title"><?php __('lblResvCity'); ?></label>
 							<span class="inline-block">
-								<input type="text" name="city" id="city" class="pj-form-field w400<?php echo $tpl['option_arr']['o_bf_include_city'] == 3 ? ' css-required required' : NULL; ?>" data-msg-required="<?php __('pj_field_required');?>"/>
+								<input type="text" name="genero" id="genero" class="pj-form-field w400<?php echo $tpl['option_arr']['o_bf_include_city'] == 3 ? ' css-required required' : NULL; ?>" data-msg-required="<?php __('pj_field_required');?>"/>
 							</span>
 						</p>
 						<?php
@@ -299,7 +299,7 @@ if (isset($tpl['status']))
 						<p>
 							<label class="title"><?php __('lblResvState'); ?></label>
 							<span class="inline-block">
-								<input type="text" name="state" id="state" class="pj-form-field w400<?php echo $tpl['option_arr']['o_bf_include_state'] == 3 ? ' css-required required' : NULL; ?>" data-msg-required="<?php __('pj_field_required');?>"/>
+								<input type="text" name="experiencia" id="experiencia" class="pj-form-field w400<?php echo $tpl['option_arr']['o_bf_include_state'] == 3 ? ' css-required required' : NULL; ?>" data-msg-required="<?php __('pj_field_required');?>"/>
 							</span>
 						</p>
 						<?php

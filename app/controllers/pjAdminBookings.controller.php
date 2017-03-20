@@ -223,8 +223,8 @@ class pjAdminBookings extends pjAdmin
 					$student_data['phone'] = isset($_POST['phone']) ? $_POST['phone'] : ':NULL';
 					$student_data['company'] = isset($_POST['company']) ? $_POST['company'] : ':NULL';
 					$student_data['address'] = isset($_POST['address']) ? $_POST['address'] : ':NULL';
-					$student_data['city'] = isset($_POST['city']) ? $_POST['city'] : ':NULL';
-					$student_data['state'] = isset($_POST['state']) ? $_POST['state'] : ':NULL';
+					$student_data['genero'] = isset($_POST['genero']) ? $_POST['genero'] : ':NULL';
+					$student_data['experiencia'] = isset($_POST['experiencia']) ? $_POST['experiencia'] : ':NULL';
 					$student_data['zip'] = isset($_POST['zip']) ? $_POST['zip'] : ':NULL';
 					$student_data['country_id'] = isset($_POST['country_id']) ? $_POST['country_id'] : ':NULL';
 					$student_data['status'] = 'T';
