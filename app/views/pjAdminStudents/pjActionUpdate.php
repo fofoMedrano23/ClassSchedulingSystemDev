@@ -51,8 +51,16 @@ if (isset($tpl['status']))
 		</p>
 		<p>
 			<label class="title"><?php __('lblCompany'); ?></label>
-			<span class="inline_block">
-				<input type="text" name="company" id="company" value="<?php echo pjSanitize::html($tpl['arr']['company'])?>" class="pj-form-field w250" />
+			<span class="inline-block">
+				<select name="education" id="education" class="pj-form-field w400">
+					<option value="">-- <?php __('lblChoose'); ?>--</option>
+					<?php
+					foreach ($tpl['education_arr'] as $v)
+					{
+						?><option value="<?php echo $v['education']; ?>"<?php echo $tpl['arr']['education'] == $v['education'] ? ' selected="selected"' : NULL; ?>><?php echo stripslashes($v['education']); ?></option><?php
+					}
+					?>
+				</select>
 			</span>
 		</p>
 		<p>
@@ -81,12 +89,7 @@ if (isset($tpl['status']))
 				<textarea name="experiencia" rows="5" cols="40" id="experiencia"><?php echo pjSanitize::html($tpl['arr']['experiencia'])?></textarea>
 			</span>
 		</p>
-		<p>
-			<label class="title"><?php __('lblResvZip'); ?></label>
-			<span class="inline_block">
-				<input type="text" name="zip" id="zip" value="<?php echo pjSanitize::html($tpl['arr']['zip'])?>" class="pj-form-field w250" />
-			</span>
-		</p>
+		
 		<p>
 			<label class="title"><?php __('lblResvCountry'); ?></label>
 			<span class="inline-block">

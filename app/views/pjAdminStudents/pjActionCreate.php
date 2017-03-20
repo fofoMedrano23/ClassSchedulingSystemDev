@@ -41,9 +41,17 @@ if (isset($tpl['status']))
 			</span>
 		</p>
 		<p>
-			<label class="title"><?php __('lblPhone'); ?></label>
-			<span class="inline_block">
-				<input type="text" name="company" id="company" class="pj-form-field w250" />
+			<label class="title"><?php __('lblCompany'); ?></label>
+			<span class="inline-block">
+				<select name="education" id="gender_id" class="pj-form-field w400">
+					<option value="">-- <?php __('lblChoose'); ?>--</option>
+					<?php
+					foreach ($tpl['education_arr'] as $v)
+					{
+						?><option value="<?php echo $v['education']; ?>"><?php echo stripslashes($v['education']); ?></option><?php
+					}
+					?>
+				</select>
 			</span>
 		</p>
 		<p>
@@ -72,12 +80,7 @@ if (isset($tpl['status']))
 				<textarea name="experiencia" rows="5" cols="40" id="experiencia"><?php echo pjSanitize::html($tpl['arr']['experiencia'])?></textarea>
 			</span>
 		</p>
-		<p>
-			<label class="title"><?php __('lblResvZip'); ?></label>
-			<span class="inline_block">
-				<input type="text" name="zip" id="zip" class="pj-form-field w250" />
-			</span>
-		</p>
+		
 		<p>
 			<label class="title"><?php __('lblResvCountry'); ?></label>
 			<span class="inline-block">
