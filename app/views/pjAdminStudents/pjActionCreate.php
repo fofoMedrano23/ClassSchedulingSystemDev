@@ -41,7 +41,7 @@ if (isset($tpl['status']))
 			</span>
 		</p>
 		<p>
-			<label class="title"><?php __('lblCompany'); ?></label>
+			<label class="title"><?php __('lblPhone'); ?></label>
 			<span class="inline_block">
 				<input type="text" name="company" id="company" class="pj-form-field w250" />
 			</span>
