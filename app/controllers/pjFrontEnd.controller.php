@@ -219,11 +219,11 @@ class pjFrontEnd extends pjFront
 			$student_data['title'] = isset($FORM['c_title']) ? $FORM['c_title'] : ':NULL';
 			$student_data['name'] = isset($FORM['c_name']) ? $FORM['c_name'] : ':NULL';
 			$student_data['phone'] = isset($FORM['c_phone']) ? $FORM['c_phone'] : ':NULL';
-			$student_data['company'] = isset($FORM['c_company']) ? $FORM['c_company'] : ':NULL';
+			$student_data['education'] = isset($FORM['c_education']) ? $FORM['c_education'] : ':NULL';
 			$student_data['address'] = isset($FORM['c_address']) ? $FORM['c_address'] : ':NULL';
 			$student_data['city'] = isset($FORM['c_city']) ? $FORM['c_city'] : ':NULL';
-			$student_data['state'] = isset($FORM['c_state']) ? $FORM['c_state'] : ':NULL';
-			$student_data['zip'] = isset($FORM['c_zip']) ? $FORM['c_zip'] : ':NULL';
+			$student_data['genero'] = isset($FORM['c_gender']) ? $FORM['c_gender'] : ':NULL';
+			$student_data['experiencia'] = isset($FORM['c_experiencia']) ? $FORM['c_experiencia'] : ':NULL';
 			$student_data['country_id'] = isset($FORM['c_country']) ? $FORM['c_country'] : ':NULL';
 			
 			if($this->isFrontLogged())

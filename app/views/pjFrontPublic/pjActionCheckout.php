@@ -169,9 +169,17 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					<div class="form-group">
 						<label><?php __('front_company'); ?> <?php if((int) $tpl['option_arr']['o_bf_include_company'] === 3) {?><span>*</span><?php }?></label>
 						
-						<input type="text" id="c_company" name="c_company" class="form-control<?php echo (int) $tpl['option_arr']['o_bf_include_company'] === 3 ? ' required' : NULL; ?>" value="<?php echo isset($FORM['c_company']) ? pjSanitize::html($FORM['c_company']) : ( isset($CLIENT['company']) ? pjSanitize::html($CLIENT['company']) : NULL ); ?>" data-msg-required="<?php __('pj_field_required'); ?>">
-				    	<div class="help-block with-errors"><ul class="list-unstyled"></ul></div>
-					</div>
+						<select id="c_education" name="c_education" class="form-control<?php echo (int) $tpl['option_arr']['o_bf_include_country'] === 3 ? ' required' : null;?>" data-msg-required="<?php __('pj_field_required'); ?>">
+							<option value="">-- <?php __('front_choose');?> --</option>
+							<?php
+							foreach($tpl['education_arr'] as $v) 
+							{
+								?><option value="<?php echo $v['education'];?>"<?php echo isset($FORM['c_education']) ? ($FORM['c_education'] == $v['id'] ? ' selected="selected"' : NULL) : ( isset($CLIENT['education_id']) ? ($CLIENT['education_id'] == $v['id'] ? ' selected="selected"' : NULL) : NULL );?>><?php  echo pjSanitize::html($v['education']);?></option><?php
+							}
+							?>
+						</select>
+						<div class="help-block with-errors"><ul class="list-unstyled"></ul></div>
+					</div><!-- /.form-group -->
 				</div>
 				<?php
 				$columns++;
@@ -217,9 +225,17 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					<div class="form-group">
 						<label><?php __('front_city'); ?> <?php if((int) $tpl['option_arr']['o_bf_include_city'] === 3) {?><span>*</span><?php }?></label>
 						
-						<input type="text" id="c_city" name="c_city" class="form-control<?php echo (int) $tpl['option_arr']['o_bf_include_city'] === 3 ? ' required' : NULL; ?>" value="<?php echo isset($FORM['c_city']) ? pjSanitize::html($FORM['c_city']) : ( isset($CLIENT['city']) ? pjSanitize::html($CLIENT['city']) : NULL ); ?>" data-msg-required="<?php __('pj_field_required'); ?>">
-				    	<div class="help-block with-errors"><ul class="list-unstyled"></ul></div>
-					</div>
+						<select id="c_gender" name="c_gender" class="form-control<?php echo (int) $tpl['option_arr']['o_bf_include_country'] === 3 ? ' required' : null;?>" data-msg-required="<?php __('pj_field_required'); ?>">
+							<option value="">-- <?php __('front_choose');?> --</option>
+							<?php
+							foreach($tpl['gender_arr'] as $v) 
+							{
+								?><option value="<?php echo $v['gender'];?>"<?php echo isset($FORM['c_gender']) ? ($FORM['c_gender'] == $v['id'] ? ' selected="selected"' : NULL) : ( isset($CLIENT['gender_id']) ? ($CLIENT['gender_id'] == $v['id'] ? ' selected="selected"' : NULL) : NULL );?>><?php  echo pjSanitize::html($v['gender']);?></option><?php
+							}
+							?>
+						</select>
+						<div class="help-block with-errors"><ul class="list-unstyled"></ul></div>
+					</div><!-- /.form-group -->
 				</div>
 				<?php
 				$columns++;

@@ -153,6 +153,28 @@ class pjFrontPublic extends pjFront
 						->orderBy('`country_title` ASC')
 						->findAll()
 						->getData();
+                                        
+                                        $education_arr = pjEducationModel::factory()
+					->findAll()
+					->getData();
+				
+				$this->set('education_arr', $education_arr);
+		
+				$this->appendJs('chosen.jquery.js', PJ_THIRD_PARTY_PATH . 'chosen/');
+				$this->appendCss('chosen.css', PJ_THIRD_PARTY_PATH . 'chosen/');
+				$this->appendJs('jquery.validate.min.js', PJ_THIRD_PARTY_PATH . 'validate/');
+				$this->appendJs('pjAdminStudents.js');
+                                
+                                $gender_arr = pjGenderModel::factory()
+					->findAll()
+					->getData();
+				
+				$this->set('gender_arr', $gender_arr);
+		
+				$this->appendJs('chosen.jquery.js', PJ_THIRD_PARTY_PATH . 'chosen/');
+				$this->appendCss('chosen.css', PJ_THIRD_PARTY_PATH . 'chosen/');
+				$this->appendJs('jquery.validate.min.js', PJ_THIRD_PARTY_PATH . 'validate/');
+				$this->appendJs('pjAdminStudents.js');
 						
 					$_terms_conditions = pjMultiLangModel::factory()->select('t1.*')
 						->where('t1.model','pjOption')
