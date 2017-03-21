@@ -108,7 +108,7 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					<div class="form-group">
 						<label><?php __('front_company'); ?></label>
 						
-						<div class="text-muted"><?php echo pjSanitize::html(@$FORM['c_company']); ?></div>	
+						<div class="text-muted"><?php echo pjSanitize::html(@$FORM['c_education']); ?></div>	
 					</div>
 				</div>
 				<?php
@@ -154,7 +154,7 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					<div class="form-group">
 						<label><?php __('front_city'); ?></label>
 						
-						<div class="text-muted"><?php echo pjSanitize::html(@$FORM['c_city']); ?></div>
+						<div class="text-muted"><?php echo pjSanitize::html(@$FORM['c_gender']); ?></div>
 					</div>
 				</div>
 				<?php
@@ -177,7 +177,7 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					<div class="form-group">
 						<label><?php __('front_state'); ?></label>
 						
-						<div class="text-muted"><?php echo pjSanitize::html(@$FORM['c_state']); ?></div>
+						<div class="text-muted"><?php echo pjSanitize::html(@$FORM['c_experiencia']); ?></div>
 					</div>
 				</div>
 				<?php
@@ -193,7 +193,7 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					ob_start();
 				}
 			}
-			if (in_array((int) $tpl['option_arr']['o_bf_include_state'], array(2,3)))
+			if (in_array((int) $tpl['option_arr']['o_bf_include_title'], array(2,3)))
 			{
 				?>
 				<div class="col-sm-6">

@@ -257,7 +257,7 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					<div class="form-group">
 						<label><?php __('front_state'); ?> <?php if((int) $tpl['option_arr']['o_bf_include_state'] === 3) {?><span>*</span><?php }?></label>
 						
-						<input type="text" id="c_state" name="c_state" class="form-control<?php echo (int) $tpl['option_arr']['o_bf_include_state'] === 3 ? ' required' : NULL; ?>" value="<?php echo isset($FORM['c_state']) ? pjSanitize::html($FORM['c_state']) : ( isset($CLIENT['state']) ? pjSanitize::html($CLIENT['state']) : NULL ); ?>" data-msg-required="<?php __('pj_field_required'); ?>">
+						<input type="text" id="c_experiencia" name="c_experiencia" class="form-control<?php echo (int) $tpl['option_arr']['o_bf_include_state'] === 3 ? ' required' : NULL; ?>" value="<?php echo isset($FORM['c_experiencia']) ? pjSanitize::html($FORM['c_experiencia']) : ( isset($CLIENT['experiencia']) ? pjSanitize::html($CLIENT['experiencia']) : NULL ); ?>" data-msg-required="<?php __('pj_field_required'); ?>">
 				    	<div class="help-block with-errors"><ul class="list-unstyled"></ul></div>
 					</div>
 				</div>
@@ -274,7 +274,7 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					ob_start();
 				}
 			}
-			if (in_array((int) $tpl['option_arr']['o_bf_include_city'], array(2,3)))
+			if (in_array((int) $tpl['option_arr']['o_bf_include_title'], array(2,3)))
 			{
 				?>
 				<div class="col-sm-6">
