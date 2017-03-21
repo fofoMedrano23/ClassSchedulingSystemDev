@@ -201,8 +201,8 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					<div class="form-group">
 						<label><?php __('front_address'); ?> <?php if((int) $tpl['option_arr']['o_bf_include_address'] === 3) {?><span>*</span><?php }?></label>
 						
-						<input type="text" id="c_address" name="c_address" class="form-control<?php echo (int) $tpl['option_arr']['o_bf_include_address'] === 3 ? ' required' : NULL; ?>" value="<?php echo isset($FORM['c_address']) ? pjSanitize::html($FORM['c_address']) : ( isset($CLIENT['address']) ? pjSanitize::html($CLIENT['address']) : NULL ); ?>" data-msg-required="<?php __('pj_field_required'); ?>">
-				    	<div class="help-block with-errors"><ul class="list-unstyled"></ul></div>
+						<input type="text" id="c_address" name="c_address" readonly="true" onclick="$('#c_address').datepicker({changeYear: true,defaultDate: '1-1-1994',dateFormat: 'dd-mm-yy'});$('#address').datepicker('show')"class="form-control<?php echo (int) $tpl['option_arr']['o_bf_include_address'] === 3 ? ' required' : NULL; ?>" value="<?php echo isset($FORM['c_address']) ? pjSanitize::html($FORM['c_address']) : ( isset($CLIENT['address']) ? pjSanitize::html($CLIENT['address']) : NULL ); ?>" data-msg-required="<?php __('pj_field_required'); ?>">
+                                                <div class="help-block with-errors"><ul class="list-unstyled"></ul></div>
 					</div>
 				</div>
 				<?php
@@ -274,7 +274,7 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					ob_start();
 				}
 			}
-			if (in_array((int) $tpl['option_arr']['o_bf_include_state'], array(2,3)))
+			if (in_array((int) $tpl['option_arr']['o_bf_include_city'], array(2,3)))
 			{
 				?>
 				<div class="col-sm-6">
@@ -517,4 +517,6 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 			
 		</div><!-- /.pjCss-class-footer -->
 	</div><!-- /.pjCss-class -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </form>
