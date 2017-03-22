@@ -231,7 +231,7 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 							<?php
 							foreach($tpl['gender_arr'] as $v) 
 							{
-								?><option value="<?php echo $v['gender'];?>"<?php echo isset($FORM['c_gender']) ? ($FORM['c_gender'] == $v['id'] ? ' selected="selected"' : NULL) : ( isset($CLIENT['gender_id']) ? ($CLIENT['gender_id'] == $v['id'] ? ' selected="selected"' : NULL) : NULL );?>><?php  echo pjSanitize::html($v['gender']);?></option><?php
+								?><option value="<?php echo $v['gender'];?>"<?php echo isset($FORM['c_gender']) ? ($FORM['c_gender'] == $v['gender'] ? ' selected="selected"' : NULL) : ( isset($CLIENT['genero']) ? ($CLIENT['genero'] == $v['gender'] ? ' selected="selected"' : NULL) : NULL );?>><?php  echo pjSanitize::html($v['gender']);?></option><?php
 							}
 							?>
 						</select>
