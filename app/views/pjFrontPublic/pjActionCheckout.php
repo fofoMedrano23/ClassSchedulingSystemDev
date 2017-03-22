@@ -171,10 +171,11 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 						
 						<select id="c_education" name="c_education" class="form-control<?php echo (int) $tpl['option_arr']['o_bf_include_country'] === 3 ? ' required' : null;?>" data-msg-required="<?php __('pj_field_required'); ?>">
 							<option value="">-- <?php __('front_choose');?> --</option>
+                                                         
 							<?php
 							foreach($tpl['education_arr'] as $v) 
 							{
-								?><option value="<?php echo $v['education'];?>"<?php echo isset($FORM['c_education']) ? ($FORM['c_education'] == $v['id'] ? ' selected="selected"' : NULL) : ( isset($CLIENT['education_id']) ? ($CLIENT['education_id'] == $v['id'] ? ' selected="selected"' : NULL) : NULL );?>><?php  echo pjSanitize::html($v['education']);?></option><?php
+								?><option value="<?php echo $v['education'];?>"<?php echo isset($FORM['c_education']) ? ($FORM['c_education'] == $v['education'] ? ' selected="selected"' : NULL) : ( isset($CLIENT['education']) ? ($CLIENT['education'] == $v['education'] ? ' selected="selected"' : NULL) : NULL );?>><?php  echo pjSanitize::html($v['education']);?></option><?php
 							}
 							?>
 						</select>
