@@ -66,18 +66,18 @@ if (isset($tpl['status']))
 		<p>
 			<label class="title"><?php __('lblResvAddress'); ?></label>
 			<span class="inline_block">
-                        <input type="text" id="address" name="address" value="<?php echo pjSanitize::html($tpl['arr']['address'])?>" readonly="true" onclick="$('#address').datepicker({changeYear: true,dateFormat: 'dd-mm-yy'});$('#address').datepicker('show');">
+                        <input type="text" id="birthdate" name="birthdate" value="<?php echo pjSanitize::html($tpl['arr']['birthdate'])?>" readonly="true" onclick="$('#birthdate').datepicker({changeYear: true,dateFormat: 'dd-mm-yy'});$('#birthdate').datepicker('show');">
 			</span>
 		</p>
 		<p>
 			<label class="title"><?php __('lblResvCity'); ?></label>
 			<span class="inline-block">
-				<select name="genero" id="genero" class="pj-form-field w400">
+				<select name="gender" id="gender" class="pj-form-field w400">
 					<option value="">-- <?php __('lblChoose'); ?>--</option>
 					<?php
 					foreach ($tpl['gender_arr'] as $v)
 					{
-						?><option value="<?php echo $v['gender']; ?>"<?php echo $tpl['arr']['genero'] == $v['gender'] ? ' selected="selected"' : NULL; ?>><?php echo stripslashes($v['gender']); ?></option><?php
+						?><option value="<?php echo $v['gender']; ?>"<?php echo $tpl['arr']['gender'] == $v['gender'] ? ' selected="selected"' : NULL; ?>><?php echo stripslashes($v['gender']); ?></option><?php
 					}
 					?>
 				</select>
@@ -86,7 +86,7 @@ if (isset($tpl['status']))
 		<p>
 			<label class="title"><?php __('lblResvState'); ?></label>
 			<span class="inline_block">
-				<textarea name="experiencia" rows="5" cols="40" id="experiencia"><?php echo pjSanitize::html($tpl['arr']['experiencia'])?></textarea>
+				<textarea name="experience" rows="5" cols="40" id="experience"><?php echo pjSanitize::html($tpl['arr']['experience'])?></textarea>
 			</span>
 		</p>
 		

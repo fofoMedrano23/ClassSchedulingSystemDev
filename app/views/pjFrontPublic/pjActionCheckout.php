@@ -203,7 +203,7 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					<div class="form-group">
 						<label><?php __('front_address'); ?> <?php if((int) $tpl['option_arr']['o_bf_include_address'] === 3) {?><span>*</span><?php }?></label>
 						
-						<input type="text" id="c_address" name="c_address" readonly="true" onclick="$('#c_address').datepicker({changeYear: true,defaultDate: '1-1-1994',dateFormat: 'dd-mm-yy'});$('#c_address').datepicker('show')"class="form-control<?php echo (int) $tpl['option_arr']['o_bf_include_address'] === 3 ? ' required' : NULL; ?>" value="<?php echo isset($FORM['c_address']) ? pjSanitize::html($FORM['c_address']) : ( isset($CLIENT['address']) ? pjSanitize::html($CLIENT['address']) : NULL ); ?>" data-msg-required="<?php __('pj_field_required'); ?>">
+						<input type="text" id="c_birthdate" name="c_birthdate" readonly="true" onclick="$('#c_birthdate').datepicker({changeYear: true,defaultDate: '1-1-1994',dateFormat: 'dd-mm-yy'});$('#c_birthdate').datepicker('show')"class="form-control<?php echo (int) $tpl['option_arr']['o_bf_include_address'] === 3 ? ' required' : NULL; ?>" value="<?php echo isset($FORM['c_birthdate']) ? pjSanitize::html($FORM['c_birthdate']) : ( isset($CLIENT['birthdate']) ? pjSanitize::html($CLIENT['birthdate']) : NULL ); ?>" data-msg-required="<?php __('pj_field_required'); ?>">
                                                 <div class="help-block with-errors"><ul class="list-unstyled"></ul></div>
 					</div>
 				</div>
@@ -232,7 +232,7 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 							<?php
 							foreach($tpl['gender_arr'] as $v) 
 							{
-								?><option value="<?php echo $v['gender'];?>"<?php echo isset($FORM['c_gender']) ? ($FORM['c_gender'] == $v['gender'] ? ' selected="selected"' : NULL) : ( isset($CLIENT['genero']) ? ($CLIENT['genero'] == $v['gender'] ? ' selected="selected"' : NULL) : NULL );?>><?php  echo pjSanitize::html($v['gender']);?></option><?php
+								?><option value="<?php echo $v['gender'];?>"<?php echo isset($FORM['c_gender']) ? ($FORM['c_gender'] == $v['gender'] ? ' selected="selected"' : NULL) : ( isset($CLIENT['gender']) ? ($CLIENT['gender'] == $v['gender'] ? ' selected="selected"' : NULL) : NULL );?>><?php  echo pjSanitize::html($v['gender']);?></option><?php
 							}
 							?>
 						</select>
@@ -259,7 +259,7 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					<div class="form-group">
 						<label><?php __('front_state'); ?> <?php if((int) $tpl['option_arr']['o_bf_include_state'] === 3) {?><span>*</span><?php }?></label>
 						
-						<input type="text" id="c_experiencia" name="c_experiencia" class="form-control<?php echo (int) $tpl['option_arr']['o_bf_include_state'] === 3 ? ' required' : NULL; ?>" value="<?php echo isset($FORM['c_experiencia']) ? pjSanitize::html($FORM['c_experiencia']) : ( isset($CLIENT['experiencia']) ? pjSanitize::html($CLIENT['experiencia']) : NULL ); ?>" data-msg-required="<?php __('pj_field_required'); ?>">
+						<input type="text" id="c_experience" name="c_experience" class="form-control<?php echo (int) $tpl['option_arr']['o_bf_include_state'] === 3 ? ' required' : NULL; ?>" value="<?php echo isset($FORM['c_experience']) ? pjSanitize::html($FORM['c_experience']) : ( isset($CLIENT['experience']) ? pjSanitize::html($CLIENT['experience']) : NULL ); ?>" data-msg-required="<?php __('pj_field_required'); ?>">
 				    	<div class="help-block with-errors"><ul class="list-unstyled"></ul></div>
 					</div>
 				</div>

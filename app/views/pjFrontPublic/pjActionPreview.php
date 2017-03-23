@@ -131,7 +131,7 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					<div class="form-group">
 						<label><?php __('front_address'); ?></label>
 						
-						<div class="text-muted"><?php echo pjSanitize::html(@$FORM['c_address']); ?></div>	
+						<div class="text-muted"><?php echo pjSanitize::html(@$FORM['c_birthdate']); ?></div>	
 					</div>
 				</div>
 				<?php
@@ -177,7 +177,7 @@ include_once PJ_VIEWS_PATH . 'pjFrontPublic/elements/header.php';
 					<div class="form-group">
 						<label><?php __('front_state'); ?></label>
 						
-						<div class="text-muted"><?php echo pjSanitize::html(@$FORM['c_experiencia']); ?></div>
+						<div class="text-muted"><?php echo pjSanitize::html(@$FORM['c_experience']); ?></div>
 					</div>
 				</div>
 				<?php

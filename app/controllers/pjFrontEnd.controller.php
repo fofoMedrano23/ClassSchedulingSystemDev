@@ -220,9 +220,9 @@ class pjFrontEnd extends pjFront
 			$student_data['name'] = isset($FORM['c_name']) ? $FORM['c_name'] : ':NULL';
 			$student_data['phone'] = isset($FORM['c_phone']) ? $FORM['c_phone'] : ':NULL';
 			$student_data['education'] = isset($FORM['c_education']) ? $FORM['c_education'] : ':NULL';
-			$student_data['address'] = isset($FORM['c_address']) ? $FORM['c_address'] : ':NULL';
-			$student_data['genero'] = isset($FORM['c_gender']) ? $FORM['c_gender'] : ':NULL';
-			$student_data['experiencia'] = isset($FORM['c_experiencia']) ? $FORM['c_experiencia'] : ':NULL';
+			$student_data['birthdate'] = isset($FORM['c_birthdate']) ? $FORM['c_birthdate'] : ':NULL';
+			$student_data['gender'] = isset($FORM['c_gender']) ? $FORM['c_gender'] : ':NULL';
+			$student_data['experience'] = isset($FORM['c_experience']) ? $FORM['c_experience'] : ':NULL';
 			$student_data['country_id'] = isset($FORM['c_country']) ? $FORM['c_country'] : ':NULL';
 			
 			if($this->isFrontLogged())

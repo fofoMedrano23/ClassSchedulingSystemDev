@@ -217,9 +217,9 @@ class pjAdminBookings extends pjAdmin
 					$student_data['name'] = isset($_POST['name']) ? $_POST['name'] : ':NULL';
 					$student_data['phone'] = isset($_POST['phone']) ? $_POST['phone'] : ':NULL';
 					$student_data['education'] = isset($_POST['education']) ? $_POST['education'] : ':NULL';
-					$student_data['address'] = isset($_POST['address']) ? $_POST['address'] : ':NULL';
-					$student_data['genero'] = isset($_POST['genero']) ? $_POST['genero'] : ':NULL';
-					$student_data['experiencia'] = isset($_POST['experiencia']) ? $_POST['experiencia'] : ':NULL';
+					$student_data['birthdate'] = isset($_POST['birthdate']) ? $_POST['birthdate'] : ':NULL';
+					$student_data['gender'] = isset($_POST['gender']) ? $_POST['gender'] : ':NULL';
+					$student_data['experience'] = isset($_POST['experience']) ? $_POST['experience'] : ':NULL';
 					$student_data['country_id'] = isset($_POST['country_id']) ? $_POST['country_id'] : ':NULL';
 					$student_data['status'] = 'T';
 					
@@ -336,9 +336,9 @@ class pjAdminBookings extends pjAdmin
 					$student_data['name'] = isset($_POST['name']) ? $_POST['name'] : ':NULL';
 					$student_data['phone'] = isset($_POST['phone']) ? $_POST['phone'] : ':NULL';
 					$student_data['education'] = isset($_POST['education']) ? $_POST['education'] : ':NULL';
-					$student_data['address'] = isset($_POST['address']) ? $_POST['address'] : ':NULL';
-					$student_data['genero'] = isset($_POST['genero']) ? $_POST['genero'] : ':NULL';
-					$student_data['experiencia'] = isset($_POST['experiencia']) ? $_POST['experiencia'] : ':NULL';
+					$student_data['birthdate'] = isset($_POST['birthdate']) ? $_POST['birthdate'] : ':NULL';
+					$student_data['gender'] = isset($_POST['gender']) ? $_POST['gender'] : ':NULL';
+					$student_data['experience'] = isset($_POST['experience']) ? $_POST['experience'] : ':NULL';
 					$student_data['country_id'] = isset($_POST['country_id']) ? $_POST['country_id'] : ':NULL';
 					$student_data['status'] = 'T';
 					

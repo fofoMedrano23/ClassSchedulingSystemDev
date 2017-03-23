@@ -57,13 +57,13 @@ if (isset($tpl['status']))
 		<p>
 			<label class="title"><?php __('lblResvAddress'); ?></label>
 			<span class="inline_block">
-                        <input type="text" id="address" name="address" readonly="true" onclick="$('#address').datepicker({changeYear: true,defaultDate: '1-1-1994',dateFormat: 'dd-mm-yy'});$('#address').datepicker('show');">
+                        <input type="text" id="birthdate" name="birthdate" readonly="true" onclick="$('#birthdate').datepicker({changeYear: true,defaultDate: '1-1-1994',dateFormat: 'dd-mm-yy'});$('#birthdate').datepicker('show');">
 			</span>
 		</p>
 		<p>
 			<label class="title"><?php __('lblResvCity'); ?></label>
 			<span class="inline-block">
-				<select name="genero" id="genero" class="pj-form-field w400">
+				<select name="gender" id="gender" class="pj-form-field w400">
 					<option value="">-- <?php __('lblChoose'); ?>--</option>
 					<?php
 					foreach ($tpl['gender_arr'] as $v)
@@ -77,7 +77,7 @@ if (isset($tpl['status']))
 		<p>
 			<label class="title"><?php __('lblResvState'); ?></label>
 			<span class="inline_block">
-				<textarea name="experiencia" rows="5" cols="40" id="experiencia"><?php echo pjSanitize::html($tpl['arr']['experiencia'])?></textarea>
+				<textarea name="experience" rows="5" cols="40" id="experience"><?php echo pjSanitize::html($tpl['arr']['experience'])?></textarea>
 			</span>
 		</p>
 		
