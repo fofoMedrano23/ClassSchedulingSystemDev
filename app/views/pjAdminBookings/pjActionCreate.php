@@ -266,7 +266,7 @@ if (isset($tpl['status']))
 						<p>
 							<label class="title"><?php __('lblResvCompany'); ?></label>
 							<span class="inline-block">
-								<input type="text" name="company" id="company" class="pj-form-field w400<?php echo $tpl['option_arr']['o_bf_include_company'] == 3 ? ' css-required required' : NULL; ?>" data-msg-required="<?php __('pj_field_required');?>"/>
+								
 							</span>
 						</p>
 						<?php
@@ -276,9 +276,9 @@ if (isset($tpl['status']))
 						?>
 						<p>
 							<label class="title"><?php __('lblResvAddress'); ?></label>
-							<span class="inline-block">
-								<input type="text" name="address" id="address" class="pj-form-field w400<?php echo $tpl['option_arr']['o_bf_include_address'] == 3 ? ' css-required required' : NULL; ?>" data-msg-required="<?php __('pj_field_required');?>"/>
-							</span>
+						<span class="inline_block">
+                                                        <input type="text" id="address" name="address" readonly="true" onclick="$('#address').datepicker({changeYear: true,defaultDate: '1-1-1994',dateFormat: 'dd-mm-yy'});$('#address').datepicker('show');">
+                                                </span>
 						</p>
 						<?php
 					}
@@ -288,7 +288,15 @@ if (isset($tpl['status']))
 						<p>
 							<label class="title"><?php __('lblResvCity'); ?></label>
 							<span class="inline-block">
-								<input type="text" name="genero" id="genero" class="pj-form-field w400<?php echo $tpl['option_arr']['o_bf_include_city'] == 3 ? ' css-required required' : NULL; ?>" data-msg-required="<?php __('pj_field_required');?>"/>
+								<select name="gender" id="education" class="pj-form-field w400<?php echo $tpl['option_arr']['o_bf_include_city'] == 3 ? ' css-required required' : NULL; ?>" data-msg-required="<?php __('pj_field_required');?>">
+									<option value="">-- <?php __('lblChoose'); ?>--</option>
+									<?php
+									foreach ($tpl['gender_arr'] as $v)
+									{
+										?><option value="<?php echo $v['gender']; ?>"><?php echo stripslashes($v['gender']); ?></option><?php
+									}
+									?>
+								</select>
 							</span>
 						</p>
 						<?php
@@ -299,8 +307,9 @@ if (isset($tpl['status']))
 						<p>
 							<label class="title"><?php __('lblResvState'); ?></label>
 							<span class="inline-block">
-								<input type="text" name="experiencia" id="experiencia" class="pj-form-field w400<?php echo $tpl['option_arr']['o_bf_include_state'] == 3 ? ' css-required required' : NULL; ?>" data-msg-required="<?php __('pj_field_required');?>"/>
+                                                            <textarea name="experiencia" id="experiencia" class="pj-form-field w500 h120<?php echo $tpl['option_arr']['o_bf_include_state'] == 3 ? ' required' : NULL; ?>" data-msg-required="<?php __('pj_field_required');?>"></textarea>
 							</span>
+                                                        
 						</p>
 						<?php
 					}

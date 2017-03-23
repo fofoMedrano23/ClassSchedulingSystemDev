@@ -43,7 +43,7 @@ if (isset($tpl['status']))
 		<p>
 			<label class="title"><?php __('lblCompany'); ?></label>
 			<span class="inline-block">
-				<select name="education" id="gender_id" class="pj-form-field w400">
+				<select name="education" id="education" class="pj-form-field w400">
 					<option value="">-- <?php __('lblChoose'); ?>--</option>
 					<?php
 					foreach ($tpl['education_arr'] as $v)

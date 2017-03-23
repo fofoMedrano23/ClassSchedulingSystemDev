@@ -204,28 +204,22 @@ class pjAdminBookings extends pjAdmin
 		{
 			if (isset($_POST['booking_create']))
 			{
-                            
-                            
-                            
 				$data = array();
 				
 				$class_arr = pjClassModel::factory()->find($_POST['class_id'])->getData();
 				
 				if($_POST['student_type'] == 'new')
 				{
-                                    
-                                    
 					$student_data = array();
 					$student_data['email'] = isset($_POST['email']) ? $_POST['email'] : ':NULL';
 					$student_data['password'] = 'pass';
 					$student_data['title'] = isset($_POST['title']) ? $_POST['title'] : ':NULL';
 					$student_data['name'] = isset($_POST['name']) ? $_POST['name'] : ':NULL';
 					$student_data['phone'] = isset($_POST['phone']) ? $_POST['phone'] : ':NULL';
-					$student_data['company'] = isset($_POST['company']) ? $_POST['company'] : ':NULL';
+					$student_data['education'] = isset($_POST['education']) ? $_POST['education'] : ':NULL';
 					$student_data['address'] = isset($_POST['address']) ? $_POST['address'] : ':NULL';
 					$student_data['genero'] = isset($_POST['genero']) ? $_POST['genero'] : ':NULL';
 					$student_data['experiencia'] = isset($_POST['experiencia']) ? $_POST['experiencia'] : ':NULL';
-					$student_data['zip'] = isset($_POST['zip']) ? $_POST['zip'] : ':NULL';
 					$student_data['country_id'] = isset($_POST['country_id']) ? $_POST['country_id'] : ':NULL';
 					$student_data['status'] = 'T';
 					
@@ -271,10 +265,41 @@ class pjAdminBookings extends pjAdmin
 				$student_arr = pjStudentModel::factory()->where('status', 'T')->orderBy('name ASC')->findAll()->getData();
 				$this->set('student_arr', $student_arr);
 				
+				$country_arr = pjCountryModel::factory()
+					->select('t1.id, t2.content AS country_title')
+					->join('pjMultiLang', "t2.model='pjCountry' AND t2.foreign_id=t1.id AND t2.field='name' AND t2.locale='".$this->getLocaleId()."'", 'left outer')
+					->orderBy('`country_title` ASC')
+					->findAll()
+					->getData();
+				
+				$this->set('country_arr', $country_arr);
+				
 				$this->appendJs('chosen.jquery.js', PJ_THIRD_PARTY_PATH . 'chosen/');
 				$this->appendCss('chosen.css', PJ_THIRD_PARTY_PATH . 'chosen/');
 				$this->appendJs('jquery.validate.min.js', PJ_THIRD_PARTY_PATH . 'validate/');
 				$this->appendJs('pjAdminBookings.js');
+                                
+                                $education_arr = pjEducationModel::factory()
+					->findAll()
+					->getData();
+				
+				$this->set('education_arr', $education_arr);
+		
+				$this->appendJs('chosen.jquery.js', PJ_THIRD_PARTY_PATH . 'chosen/');
+				$this->appendCss('chosen.css', PJ_THIRD_PARTY_PATH . 'chosen/');
+				$this->appendJs('jquery.validate.min.js', PJ_THIRD_PARTY_PATH . 'validate/');
+				$this->appendJs('pjAdminStudents.js');
+                                
+                                $gender_arr = pjGenderModel::factory()
+					->findAll()
+					->getData();
+				
+				$this->set('gender_arr', $gender_arr);
+		
+				$this->appendJs('chosen.jquery.js', PJ_THIRD_PARTY_PATH . 'chosen/');
+				$this->appendCss('chosen.css', PJ_THIRD_PARTY_PATH . 'chosen/');
+				$this->appendJs('jquery.validate.min.js', PJ_THIRD_PARTY_PATH . 'validate/');
+				$this->appendJs('pjAdminStudents.js');
 			}
 		} else {
 			
@@ -310,11 +335,10 @@ class pjAdminBookings extends pjAdmin
 					$student_data['title'] = isset($_POST['title']) ? $_POST['title'] : ':NULL';
 					$student_data['name'] = isset($_POST['name']) ? $_POST['name'] : ':NULL';
 					$student_data['phone'] = isset($_POST['phone']) ? $_POST['phone'] : ':NULL';
-					$student_data['company'] = isset($_POST['company']) ? $_POST['company'] : ':NULL';
+					$student_data['education'] = isset($_POST['education']) ? $_POST['education'] : ':NULL';
 					$student_data['address'] = isset($_POST['address']) ? $_POST['address'] : ':NULL';
-					$student_data['city'] = isset($_POST['city']) ? $_POST['city'] : ':NULL';
-					$student_data['state'] = isset($_POST['state']) ? $_POST['state'] : ':NULL';
-					$student_data['zip'] = isset($_POST['zip']) ? $_POST['zip'] : ':NULL';
+					$student_data['genero'] = isset($_POST['genero']) ? $_POST['genero'] : ':NULL';
+					$student_data['experiencia'] = isset($_POST['experiencia']) ? $_POST['experiencia'] : ':NULL';
 					$student_data['country_id'] = isset($_POST['country_id']) ? $_POST['country_id'] : ':NULL';
 					$student_data['status'] = 'T';
 					
@@ -363,11 +387,42 @@ class pjAdminBookings extends pjAdmin
 				$student_arr = pjStudentModel::factory()->where('status', 'T')->orderBy('name ASC')->findAll()->getData();
 				$this->set('student_arr', $student_arr);
 				
+				$country_arr = pjCountryModel::factory()
+				->select('t1.id, t2.content AS country_title')
+				->join('pjMultiLang', "t2.model='pjCountry' AND t2.foreign_id=t1.id AND t2.field='name' AND t2.locale='".$this->getLocaleId()."'", 'left outer')
+				->orderBy('`country_title` ASC')
+				->findAll()
+				->getData();
+				
+				$this->set('country_arr', $country_arr);
+				
 				$this->appendJs('tinymce.min.js', PJ_THIRD_PARTY_PATH . 'tinymce/');
 				$this->appendJs('chosen.jquery.js', PJ_THIRD_PARTY_PATH . 'chosen/');
 				$this->appendCss('chosen.css', PJ_THIRD_PARTY_PATH . 'chosen/');
 				$this->appendJs('jquery.validate.min.js', PJ_THIRD_PARTY_PATH . 'validate/');
 				$this->appendJs('pjAdminBookings.js');
+                                
+                                $education_arr = pjEducationModel::factory()
+					->findAll()
+					->getData();
+				
+				$this->set('education_arr', $education_arr);
+		
+				$this->appendJs('chosen.jquery.js', PJ_THIRD_PARTY_PATH . 'chosen/');
+				$this->appendCss('chosen.css', PJ_THIRD_PARTY_PATH . 'chosen/');
+				$this->appendJs('jquery.validate.min.js', PJ_THIRD_PARTY_PATH . 'validate/');
+				$this->appendJs('pjAdminStudents.js');
+                                
+                                $gender_arr = pjGenderModel::factory()
+					->findAll()
+					->getData();
+				
+				$this->set('gender_arr', $gender_arr);
+		
+				$this->appendJs('chosen.jquery.js', PJ_THIRD_PARTY_PATH . 'chosen/');
+				$this->appendCss('chosen.css', PJ_THIRD_PARTY_PATH . 'chosen/');
+				$this->appendJs('jquery.validate.min.js', PJ_THIRD_PARTY_PATH . 'validate/');
+				$this->appendJs('pjAdminStudents.js');
 			}
 		} else {
 			$this->set('status', 2);
@@ -671,3 +726,5 @@ class pjAdminBookings extends pjAdmin
 	}
 }
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
